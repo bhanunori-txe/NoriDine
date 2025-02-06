@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Recipe Website</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Recipe Cards Section (Where Recipes will be Displayed) -->
+    <div class="container my-5" id="recipe-list">
+      <h2 class="text-center text-dark">All Recipes</h2>
+      <div class="row" id="recipe-cards">
+        <!-- Recipe Cards Will Be Dynamically Added Here -->
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Recipe Finder</a>
+    </nav>
+
+    <!-- Main content -->
+    <div class="container mt-5">
+      <!-- Search bar -->
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <input
+            type="text"
+            id="search-input"
+            class="form-control"
+            placeholder="Search for a recipe..."
+          />
+        </div>
+      </div>
+
+      <!-- Recipe Results -->
+      <div id="recipe-results" class="row mt-4"></div>
+    </div>
+
+    <!-- Recipe Submission Form -->
+    <div class="container my-5">
+      <h2 class="text-center text-dark">Submit Your Recipe</h2>
+      <form id="recipe-form">
+        <div class="mb-3">
+          <label for="recipe-name" class="form-label">Recipe Name</label>
+          <input type="text" class="form-control" id="recipe-name" required />
+        </div>
+        <div class="mb-3">
+          <label for="recipe-description" class="form-label"
+            >Recipe Description</label
+          >
+          <textarea
+            class="form-control"
+            id="recipe-description"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="recipe-ingredients" class="form-label"
+            >Ingredients (comma-separated)</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="recipe-ingredients"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="recipe-instructions" class="form-label"
+            >Instructions</label
+          >
+          <textarea
+            class="form-control"
+            id="recipe-instructions"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Add Recipe</button>
+      </form>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
